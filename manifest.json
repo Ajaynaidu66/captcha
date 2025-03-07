@@ -8,6 +8,7 @@
   "background": {
     "service_worker": "background.js"
   },
+  namaste
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
