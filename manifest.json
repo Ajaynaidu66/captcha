@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Game CAPTCHA",
+  "version": "1.0",
+  "description": "A thrilling CAPTCHA game to verify users before accessing websites.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["game/game.html", "game/game.js", "game/styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
